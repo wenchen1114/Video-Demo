@@ -2,6 +2,7 @@
     <head>
         <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
         <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <a-scene webxr="optionalFeatures: hit-test;">
@@ -9,14 +10,13 @@
                 <img id="add" src="Add.png">
               </a-assets>
             <a-camera>
-            <a-image src="#add" position="0.3 -0.3 -1" width="0.1" height="0.1"></a-image>
+            <!-- <a-image src="#add" position="0.3 -0.3 -1" width="0.1" height="0.1"></a-image> -->
             </a-camera>
             <a-entity ar-hit-test>
                 <a-sky color="#ECECEC" hide-in-ar-mode ></a-sky>
                 <a-plane width="0.125" rotation="-90 0 0" height="0.125" color="#ffffff" ></a-plane>
             </a-entity>
-
           </a-scene>
-        
+        <img id="button" src="Add.png">
     </body>
 </html>
