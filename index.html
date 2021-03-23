@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+        <script src="index.js"></script>
+        <script src="interact.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <a-scene webxr="optionalFeatures: hit-test;">
+            <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+            <a-assets>
+                <img id="add" src="Add.png">
+                <img id="image" src="Image.png">
+                <img id="poster" src="poster.png">
+              </a-assets>
+            <a-camera>
+                <a-image src="#add" position="0.28 -0.31 -1" width="0.08" height="0.08"></a-image>
+                <a-image src="#image" position="0.21 -0.18 -1" width="0.19" height="0.08" opacity="0" animation="property:opacity; to: 1; dur: 200; delay: 5000"></a-image>
+            </a-camera>
+            <a-entity ar-hit-test>
+                <!-- <a-plane  id="plane" width="0.125" rotation="-90 0 0" height="0.125" color="#ffffff"></a-plane> -->
+                <a-image src="#poster" width="0.612" height="0.792" rotation="-90 0 0" animation="property:rotation; to: -115 0 0; dur: 200; delay: 20000 easing:easeInSine" animation__2="property:rotation; from: -115 0 0; to: -90 0 0; dur: 200; delay: 20200 easing:easeInSine"></a-image> 
+            </a-entity>
+            <a-sky color="#ECECEC" hide-in-ar-mode ></a-sky>
+          </a-scene>
+    </body>
+</html>
